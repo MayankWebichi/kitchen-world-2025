@@ -9,6 +9,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "postinstall": "chmod +x node_modules/.bin/vite"
+    {
+      "scripts": {
+        "build": "npx vite build"
+      }
+    }
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
