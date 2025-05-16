@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-neutral-700 antialiased;
+}
+
+.section-gradient {
+  @apply bg-gradient-to-br from-yellow-100 via-primary-50 to-white;
+}
+
+.card-gradient {
+  @apply bg-gradient-to-tr from-white via-primary-50 to-yellow-50;
+}
+
+.animated-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.animated-slide-up {
+  animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollIndicator {
+  0% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.6; }
+}
+
+@keyframes bounceMobile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes logoBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-12px) scale(1.05); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-scrollIndicator {
+  animation: scrollIndicator 1.5s infinite;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+.animation-delay-900 {
+  animation-delay: 0.9s;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.animate-bounce-mobile {
+  animation: bounceMobile 1.2s infinite;
+}
+
+@media (min-width: 768px) {
+  .animate-bounce-mobile {
+    animation: none;
+  }
+}
+
+.animate-logo-bounce {
+  animation: logoBounce 1.8s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+@keyframes logoShine {
+  0% { left: -40%; opacity: 0; }
+  40% { opacity: 0.2; }
+  50% { left: 110%; opacity: 0.6; }
+  100% { left: 110%; opacity: 0; }
+}
+
+.animate-logo-shine {
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 60%;
+  height: 100%;
+  animation: logoShine 2.5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+  pointer-events: none;
+}
+
+@media (max-width: 320px) {
+  html { font-size: 16px; }
+  .responsive-img { width: 100vw; height: auto; }
+  .touch-target { min-width: 48px; min-height: 48px; }
+}
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  .responsive-img { width: 100vw; height: auto; }
+  .touch-target { min-width: 48px; min-height: 48px; }
+}
+@media (min-width: 1024px) {
+  html { font-size: 18px; }
+}
